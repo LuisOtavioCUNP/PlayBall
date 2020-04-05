@@ -5,6 +5,8 @@
  */
 package playball.modelo;
 
+import java.util.Objects;
+
 /**
  *
  * @author Luís
@@ -15,6 +17,41 @@ public class Quadra {
  private String valorHora;
  private String endereco;
  private String numEndereco;
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 89 * hash + Objects.hashCode(this.area);
+        hash = 89 * hash + Objects.hashCode(this.valorHora);
+        hash = 89 * hash + Objects.hashCode(this.numEndereco);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Quadra other = (Quadra) obj;
+        if (!Objects.equals(this.area, other.area)) {
+            return false;
+        }
+        if (!Objects.equals(this.valorHora, other.valorHora)) {
+            return false;
+        }
+        if (!Objects.equals(this.numEndereco, other.numEndereco)) {
+            return false;
+        }
+        return true;
+    }
+ 
+ 
 
     /**
      * @return the nome
