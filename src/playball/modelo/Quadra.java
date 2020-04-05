@@ -14,6 +14,7 @@ public class Quadra {
  private String area;
  private String valorHora;
  private String endereco;
+ private String numEndereco;
 
     /**
      * @return the nome
@@ -70,5 +71,23 @@ public class Quadra {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
- 
+    
+    /**
+     * @return the numEndereco
+     */
+    public String getNumEndereco() {
+        return numEndereco;
+    }
+
+    /**
+     * @param numEndereco the numEndereco to set
+     */
+    public void setNumEndereco(String numEndereco) {
+        this.numEndereco = numEndereco;
+    }   
+         @Override
+    public String toString() {
+        return "Quadra{" + "area=" + area + ", valorHora=" + valorHora + '}';
+    }
+
 }
