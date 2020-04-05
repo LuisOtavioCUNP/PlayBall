@@ -5,6 +5,8 @@
  */
 package playball.modelo;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -17,7 +19,17 @@ public class Quadra {
  private String valorHora;
  private String endereco;
  private String numEndereco;
-
+ private List esporte;
+ 
+ /* AGUARDANDO CRICAO DA CLASSE ESPORTE
+ public Quadra(){
+     esporte = new ArrayList();
+     
+     esporte.add(new Esporte());
+     
+ }
+ */
+ 
     @Override
     public int hashCode() {
         int hash = 3;
