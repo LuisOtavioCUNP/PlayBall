@@ -39,6 +39,11 @@ public class HorarioDeFuncionamento {
     }
     private Calendar inicioFuncionamento;
     private Calendar fimFuncionamento;
+
+    @Override
+    public String toString() {
+        return "HorarioDeFuncionamento{" + "inicioFuncionamento=" + inicioFuncionamento + ", fimFuncionamento=" + fimFuncionamento + '}';
+    }
     
     
 
