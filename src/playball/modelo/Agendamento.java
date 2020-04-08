@@ -13,6 +13,9 @@ public class Agendamento {
      * @return the vagas
      */
     public String getVagas() {
+        
+        
+        int teste;
         return vagas;
     }
 
