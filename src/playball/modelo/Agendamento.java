@@ -1,21 +1,54 @@
 
 package playball.modelo;
 
+import java.util.Calendar;
+import java.util.Objects;
+
 
 public class Agendamento {
     
     private String vagas;
-    private String horaInicio;
-    private String horaFim;
-    private String diaAgendamento;
+    private Calendar horaInicio;
+    private Calendar horaFim;
+    private Quadra quadra;
+    
 
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 89 * hash + Objects.hashCode(this.horaInicio);
+        hash = 89 * hash + Objects.hashCode(this.horaFim);
+        hash = 89 * hash + Objects.hashCode(this.quadra);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Agendamento other = (Agendamento) obj;
+        if (!Objects.equals(this.horaInicio, other.horaInicio)) {
+            return false;
+        }
+        if (!Objects.equals(this.horaFim, other.horaFim)) {
+            return false;
+        }
+        if (!Objects.equals(this.quadra, other.quadra)) {
+            return false;
+        }
+        return true;
+    }
     /**
      * @return the vagas
      */
     public String getVagas() {
-        
-        
-        int teste;
         return vagas;
     }
 
@@ -29,49 +62,29 @@ public class Agendamento {
     /**
      * @return the horaInicio
      */
-    public String getHoraInicio() {
+    public Calendar getHoraInicio() {
         return horaInicio;
     }
 
     /**
      * @param horaInicio the horaInicio to set
      */
-    public void setHoraInicio(String horaInicio) {
+    public void setHoraInicio(Calendar horaInicio) {
         this.horaInicio = horaInicio;
     }
 
     /**
      * @return the horaFim
      */
-    public String getHoraFim() {
+    public Calendar getHoraFim() {
         return horaFim;
     }
 
     /**
      * @param horaFim the horaFim to set
      */
-    public void setHoraFim(String horaFim) {
+    public void setHoraFim(Calendar horaFim) {
         this.horaFim = horaFim;
     }
-
-    /**
-     * @return the diaAgendamento
-     */
-    public String getDiaAgendamento() {
-        return diaAgendamento;
-    }
-
-    /**
-     * @param diaAgendamento the diaAgendamento to set
-     */
-    public void setDiaAgendamento(String diaAgendamento) {
-        this.diaAgendamento = diaAgendamento;
-    }
-    
-    
-    
-    
-    
-    
     
 }
