@@ -15,6 +15,7 @@ import java.util.Objects;
  */
 public class Quadra {
  private String nome;
+ private String descricao;
  private String area;
  private String valorHora;
  private String endereco;
@@ -29,13 +30,12 @@ public class Quadra {
      
  }
  */
- 
+
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 89 * hash + Objects.hashCode(this.area);
-        hash = 89 * hash + Objects.hashCode(this.valorHora);
-        hash = 89 * hash + Objects.hashCode(this.numEndereco);
+        hash = 71 * hash + Objects.hashCode(this.nome);
+        hash = 71 * hash + Objects.hashCode(this.descricao);
         return hash;
     }
 
@@ -51,19 +51,16 @@ public class Quadra {
             return false;
         }
         final Quadra other = (Quadra) obj;
-        if (!Objects.equals(this.area, other.area)) {
+        if (!Objects.equals(this.nome, other.nome)) {
             return false;
         }
-        if (!Objects.equals(this.valorHora, other.valorHora)) {
-            return false;
-        }
-        if (!Objects.equals(this.numEndereco, other.numEndereco)) {
+        if (!Objects.equals(this.descricao, other.descricao)) {
             return false;
         }
         return true;
     }
  
- 
+
 
     /**
      * @return the nome
