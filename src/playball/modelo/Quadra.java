@@ -16,7 +16,6 @@ import java.util.Objects;
 public class Quadra {
  private String nome;
  private String descricao;
- private String area;
  private String valorHora;
  private String endereco;
  private String numEndereco;
@@ -76,19 +75,6 @@ public class Quadra {
         this.nome = nome;
     }
 
-    /**
-     * @return the area
-     */
-    public String getArea() {
-        return area;
-    }
-
-    /**
-     * @param area the area to set
-     */
-    public void setArea(String area) {
-        this.area = area;
-    }
 
     /**
      * @return the valorHora
@@ -133,7 +119,7 @@ public class Quadra {
     }   
          @Override
     public String toString() {
-        return "Quadra{" + "area=" + area + ", valorHora=" + valorHora + '}';
+        return "Quadra{" + "descricao=" + descricao + ", valorHora=" + valorHora + '}';
     }
 
 }
